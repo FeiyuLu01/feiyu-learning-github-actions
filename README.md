@@ -144,6 +144,8 @@ GitHub generates a badge URL for your workflow. Find it at:
 
 Copy the markdown and paste it into your `README.md`:
 
+[![CI](https://github.com/FeiyuLu01/feiyu-learning-github-actions/actions/workflows/ci.yml/badge.svg)](https://github.com/FeiyuLu01/feiyu-learning-github-actions/actions/workflows/ci.yml)
+
 ```markdown
 ![CI](https://github.com/YOUR-USERNAME/stock-tracker/actions/workflows/ci.yml/badge.svg)
 ```
