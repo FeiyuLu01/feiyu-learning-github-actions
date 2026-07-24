@@ -25,12 +25,12 @@ public class StockServiceImpl implements StockService {
 
     @Override
     public Stock addStock(Stock stock) {
-        throw new IllegalArgumentException("Always broken: " + stock.symbol());
+//        throw new IllegalArgumentException("Always broken: " + stock.symbol());
 
-//        stockRepository.findBySymbol(stock.symbol()).ifPresent(s -> {
-//            throw new IllegalArgumentException("Duplicate symbol: " + stock.symbol());
-//        });
-//        return stockRepository.save(stock);
+        stockRepository.findBySymbol(stock.symbol()).ifPresent(s -> {
+            throw new IllegalArgumentException("Duplicate symbol: " + stock.symbol());
+        });
+        return stockRepository.save(stock);
     }
 
     @Override public HistoricalPrice addPrice(HistoricalPrice price) { return priceRepository.save(price); }
